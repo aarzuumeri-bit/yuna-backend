@@ -24,7 +24,7 @@ def call_gemini(messages: List[Message], mode: Optional[str] = None) -> str:
     if not GOOGLE_API_KEY or "your_api_key" in GOOGLE_API_KEY:
         return "System Error: GOOGLE_API_KEY is missing in backend .env file."
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GOOGLE_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GOOGLE_API_KEY}"
     
     # Prepare System Prompt
     sys_text = SYSTEM_PROMPT
